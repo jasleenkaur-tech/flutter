@@ -214,3 +214,5 @@ class MyFlutterApp extends StatelessWidget{
    );
   }
 }
+
+to see the different screens in one app we need to make different files left from main .. called the classes in the main file in new files create the new classes and that classes will be called in the main.dart file
