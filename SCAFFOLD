@@ -1,0 +1,162 @@
+import 'package:flutter/material.dart';
+
+void main(){
+
+  runApp(
+      MaterialApp(
+          title:"My Flutter App",
+          home:Scaffold(
+            appBar: AppBar(title: Text("My first screen"),),
+            body: Material(
+              color: Colors.deepPurpleAccent,
+              child: Center(
+                child: Text(
+                  "Hello Flutter",
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(fontSize: 40,color: Colors.blue),
+                ),
+              ),
+            ),
+          )
+      ),
+  );
+}
+
+1️⃣ Import Statement
+import 'package:flutter/material.dart';
+
+
+Imports Flutter’s Material Design library.
+
+Gives access to widgets like MaterialApp, Scaffold, AppBar, Text, Center, and colors.
+
+2️⃣ main() Function
+void main(){
+
+
+The starting point of the Flutter application.
+
+Everything begins executing from here.
+
+3️⃣ runApp()
+runApp(
+
+
+Launches the Flutter app.
+
+Takes a widget tree as its argument.
+
+4️⃣ MaterialApp
+MaterialApp(
+  title: "My Flutter App",
+
+
+The root widget of the app.
+
+Applies Material Design styling.
+
+title is the app name (used by the system, not shown on screen).
+
+5️⃣ Scaffold
+home: Scaffold(
+
+
+Provides a basic screen layout structure.
+
+Handles app elements like:
+
+AppBar
+
+body
+
+FloatingActionButton
+
+Drawer, etc.
+
+6️⃣ AppBar
+appBar: AppBar(
+  title: Text("My first screen"),
+),
+
+
+Displays a top app bar.
+
+Shows the title “My first screen” at the top.
+
+7️⃣ Body → Material Widget
+body: Material(
+
+
+Defines the main content area of the screen.
+
+Material widget provides a material surface for styling.
+
+8️⃣ Background Color
+color: Colors.deepPurpleAccent,
+
+
+Sets the background color of the body to deep purple.
+
+9️⃣ Center Widget
+child: Center(
+
+
+Centers its child widget vertically and horizontally on the screen.
+
+🔟 Text Widget
+child: Text(
+  "Hello Flutter",
+
+
+Displays the text “Hello Flutter”.
+
+1️⃣1️⃣ textDirection
+textDirection: TextDirection.ltr,
+
+
+Sets text direction Left to Right.
+
+Here it’s optional, because MaterialApp already provides direction.
+
+Included for learning/clarity.
+
+1️⃣2️⃣ TextStyle
+style: TextStyle(
+  fontSize: 40,
+  color: Colors.blue,
+),
+
+
+fontSize: 40 → Large text
+
+color: Colors.blue → Blue text color
+
+✅ Final Output
+
+📱 The app screen shows:
+
+An AppBar with title “My first screen”
+
+Deep purple background
+
+Blue “Hello Flutter” text
+
+Text is centered on the screen
+
+🧠 Widget Tree (Simplified)
+MaterialApp
+ └── Scaffold
+     ├── AppBar
+     └── Body
+         └── Material
+             └── Center
+                 └── Text
+
+📝 Key Learning Points
+
+✔ MaterialApp → App-level configuration
+✔ Scaffold → Screen layout
+✔ AppBar → Top navigation bar
+✔ Material → Styling surface
+✔ Center → Alignment
+✔ Text → Display content
