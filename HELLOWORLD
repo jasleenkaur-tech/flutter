@@ -1,0 +1,78 @@
+import 'package:flutter/material.dart';
+
+void main(){
+
+  runApp(
+    Center(
+      child: Text(
+        "Hello Flutter",
+        textDirection: TextDirection.ltr,
+      ),
+    ),
+  );
+}
+
+1️⃣ Import Statement
+import 'package:flutter/material.dart';
+
+
+Imports Flutter’s Material library.
+
+Provides basic widgets like Text, Center, and core Flutter functionality.
+
+2️⃣ main() Function
+void main(){
+
+
+Entry point of the Flutter application.
+
+Execution starts from here.
+
+3️⃣ runApp()
+runApp(
+
+
+Launches the Flutter app.
+
+Takes one widget as its argument.
+
+This widget becomes the root widget of the UI.
+
+4️⃣ Center Widget
+Center(
+
+
+A layout widget.
+
+Centers its child horizontally and vertically on the screen.
+
+5️⃣ Text Widget
+child: Text(
+  "Hello Flutter",
+
+
+Displays the text "Hello Flutter" on the screen.
+
+6️⃣ textDirection
+textDirection: TextDirection.ltr,
+
+
+Specifies Left-To-Right text direction.
+
+Required here because:
+
+You are not using MaterialApp
+
+There is no Directionality widget
+
+Without this line, the app will throw an error.
+
+✅ Final Output
+
+📱 The screen will show:
+
+Plain white background
+
+Black text saying “Hello Flutter”
+
+Text is centered on the screen
