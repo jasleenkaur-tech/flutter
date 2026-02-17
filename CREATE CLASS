@@ -1,0 +1,187 @@
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(MyFlutterApp());
+}
+
+class MyFlutterApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+   return  MaterialApp(
+       title:"My Flutter App",
+       home:Scaffold(
+         appBar: AppBar(title: Text("My first screen"),),
+         body: Material(
+           color: Colors.deepPurpleAccent,
+           child: Center(
+             child: Text(
+               "Hello Flutter",
+               textDirection: TextDirection.ltr,
+               style: TextStyle(fontSize: 40,color: Colors.blue),
+             ),
+           ),
+         ),
+       )
+   );
+  }
+}
+
+1️⃣ Import Statement
+import 'package:flutter/material.dart';
+
+
+Imports Flutter’s Material Design widgets.
+
+Required for MaterialApp, Scaffold, AppBar, Text, etc.
+
+2️⃣ main() Function
+void main(){
+  runApp(MyFlutterApp());
+}
+
+
+main() is the starting point.
+
+runApp() launches the app.
+
+Instead of passing UI directly, we pass a class (MyFlutterApp).
+
+👉 This makes the app clean, reusable, and maintainable.
+
+3️⃣ Why Are We Using a Class? ❓
+
+In Flutter:
+
+Everything is a Widget
+
+Widgets are usually written as classes
+
+Benefits of using a class:
+
+✔ Code becomes organized
+✔ Easy to manage large apps
+✔ Reusable screens
+✔ Supports state management
+
+4️⃣ Creating a Widget Class
+class MyFlutterApp extends StatelessWidget{
+
+
+Creates a custom widget named MyFlutterApp
+
+StatelessWidget means:
+
+UI does not change
+
+No dynamic data (no counter, no input changes)
+
+📌 Use StatefulWidget when data changes.
+
+5️⃣ build() Method
+@override
+Widget build(BuildContext context) {
+
+
+build() returns the UI of the widget
+
+Called automatically by Flutter
+
+context gives information about the widget’s position in the widget tree
+
+6️⃣ MaterialApp
+return MaterialApp(
+  title:"My Flutter App",
+
+
+Root widget of the app
+
+Applies Material Design
+
+Handles navigation, themes, direction, etc.
+
+7️⃣ Scaffold
+home: Scaffold(
+
+
+Provides screen structure
+
+Manages:
+
+AppBar
+
+body
+
+Drawer
+
+FloatingActionButton
+
+8️⃣ AppBar
+appBar: AppBar(
+  title: Text("My first screen"),
+),
+
+
+Displays a top bar
+
+Shows screen title
+
+9️⃣ Body → Material Widget
+body: Material(
+  color: Colors.deepPurpleAccent,
+
+
+Creates a material surface
+
+Sets background color
+
+📌 Material here is optional because Scaffold already provides it.
+
+🔟 Center Widget
+child: Center(
+
+
+Centers the content on the screen
+
+1️⃣1️⃣ Text Widget
+child: Text(
+  "Hello Flutter",
+
+
+Displays the text
+
+1️⃣2️⃣ textDirection
+textDirection: TextDirection.ltr,
+
+
+Left-to-right text direction
+
+Optional because MaterialApp already sets it
+
+1️⃣3️⃣ TextStyle
+style: TextStyle(
+  fontSize: 40,
+  color: Colors.blue,
+),
+
+
+Sets text size and color
+
+🧠 Widget Tree (Easy View)
+MyFlutterApp (StatelessWidget)
+ └── MaterialApp
+     └── Scaffold
+         ├── AppBar
+         └── Body
+             └── Material
+                 └── Center
+                     └── Text
+
+✅ Final Output
+
+📱 Screen shows:
+
+AppBar with "My first screen"
+
+Deep purple background
+
+Large blue "Hello Flutter" text centered
