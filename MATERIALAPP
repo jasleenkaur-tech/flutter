@@ -1,0 +1,131 @@
+// USING THE MATERIALAPP WIDGET
+
+import 'package:flutter/material.dart';
+
+void main(){
+
+  runApp(
+      MaterialApp(
+          title:"My Flutter App",
+          home:Material(
+              color: Colors.deepPurpleAccent,
+              child: Center(
+                  child: Text(
+                    "Hello Flutter",
+                    textDirection: TextDirection.ltr,
+                    style: TextStyle(fontSize: 40,color: Colors.blue),
+                  ),
+              ),
+          ),
+      ),
+  );
+}
+
+1️⃣ Import Statement
+import 'package:flutter/material.dart';
+
+
+Imports the Material Design library.
+
+Gives access to widgets like MaterialApp, Text, Center, Colors, etc.
+
+This is the most commonly used Flutter package.
+
+2️⃣ Main Function
+void main(){
+
+
+main() is the entry point of every Dart/Flutter app.
+
+Execution of the app starts from here.
+
+3️⃣ runApp()
+runApp(
+
+
+Starts the Flutter application.
+
+Takes a Widget as an argument.
+
+The widget passed here becomes the root widget of the app.
+
+4️⃣ MaterialApp
+MaterialApp(
+  title:"My Flutter App",
+
+
+Wraps the entire app with Material Design features.
+
+title is the app’s name (used by the OS, not visible on screen).
+
+5️⃣ home Property
+home: Material(
+
+
+home defines the first screen of the app.
+
+Material widget provides a material-style surface (needed for colors, effects, etc.).
+
+6️⃣ Background Color
+color: Colors.deepPurpleAccent,
+
+
+Sets the background color of the screen.
+
+deepPurpleAccent is a predefined Material color.
+
+7️⃣ Center Widget
+child: Center(
+
+
+Centers its child widget horizontally and vertically on the screen.
+
+8️⃣ Text Widget
+child: Text(
+  "Hello Flutter",
+
+
+Displays the text "Hello Flutter" on the screen.
+
+9️⃣ Text Direction
+textDirection: TextDirection.ltr,
+
+
+Sets text direction as Left To Right.
+
+Required when using Text without a MaterialApp or Directionality widget.
+
+🔟 Text Styling
+style: TextStyle(
+  fontSize: 40,
+  color: Colors.blue,
+),
+
+
+fontSize: 40 → Large text size
+
+color: Colors.blue → Text color is blue
+
+✅ Final Output
+
+📱 The app shows:
+
+A deep purple background
+
+Blue text saying “Hello Flutter”
+
+Text is centered on the screen
+
+🧠 Simple Summary
+
+main() → starts the app
+
+runApp() → loads the UI
+
+MaterialApp → app structure
+
+Material → background surface
+
+Center → aligns content
+
+Text → displays message
