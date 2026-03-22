@@ -1,0 +1,96 @@
+CONTAINER.........
+main.dart 
+
+import 'package:flutter/material.dart';
+import 'home.dart';
+void main(){
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: "Exploring UI Widgets",
+    home: Home(),
+  ));
+}
+
+home.dart
+import 'package:flutter/material.dart';
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      color: Colors.yellow,
+      // height: 200,
+      // width: 200, there is no effect by using these both height and width
+      child: Text("FLIGHT",textDirection: TextDirection.ltr),
+    );
+  }
+}
+
+BOX CONSTRAINTS...........
+it means container needs the parent to attain the width and height 
+
+main.dart
+
+import 'package:flutter/material.dart';
+import 'home.dart';
+void main(){
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: "Exploring UI Widgets",
+    home: Home(),
+  ));
+}
+
+home.dart
+import 'package:flutter/material.dart';
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        alignment: Alignment.center,
+        color: Colors.yellow,
+        height: 200,
+        width: 200,
+        child: Text("FLIGHT", textDirection: TextDirection.ltr),
+      ),
+    );
+  }
+}
+
+MARGIN VS PADDING.....
+
+main.dart 
+
+import 'package:flutter/material.dart';
+import 'home.dart';
+void main(){
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: "Exploring UI Widgets",
+    home: Home(),
+  ));
+}
+
+home.dart
+
+import 'package:flutter/material.dart';
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        alignment: Alignment.center,
+        color: Colors.yellow,
+        // height: 200,
+        // width: 200,
+        margin: EdgeInsets.all(100),
+        padding: EdgeInsets.all(50),
+        child: Text("FLIGHT", textDirection: TextDirection.ltr),
+      ),
+    );
+  }
+}
